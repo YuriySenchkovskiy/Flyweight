@@ -15,7 +15,7 @@ public class CreateWorldPrefab : MonoBehaviour
             for (int z = 0; z < depth; z++)
             {
                 Vector3 pos = new Vector3(x, 
-                    Mathf.PerlinNoise(x * 0.2f, z * 0.2f) * 3, 
+                    Mathf.PerlinNoise(x * 0.2f, z * 0.2f) * 3, // автогенерация через шум Перлина
                     z);
                 GameObject go = Instantiate(cube, pos, Quaternion.identity);
             }
